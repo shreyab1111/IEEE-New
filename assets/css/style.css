@@ -5,7 +5,9 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background-image : url("../img/ag-square.png")
+    background-image : url("../img/ag-square.png");
+    
+    
 }
 
 a {
@@ -834,10 +836,18 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
-
+.services{
+    background-image: url("../img/sb1.png");
+    background-position: bottom;
+    background-blend-mode: soft-light;
+    background-color: rgba(255,255,255,0.7);
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
 .about .content h3 {
     font-weight: 600;
     font-size: 26px;
+    
 }
 
 .about .content ul {
@@ -1205,7 +1215,31 @@ section {
     }
 }
 
+.collaborators{
+    background-image:url("../img/binding-light.png");
+    
 
+}
+.collab img{
+    position: relative;
+    width:200px;
+   height: 100%;
+}
+ @media screen and (max-width:990px){
+     .collab img{
+         position: relative;
+         top:50%;
+         left:50%;
+         transform:translate(-50%,-50%);
+         height:100%;
+         padding:10%;
+         width: 70%;
+     }
+     .collab-title{
+         padding: 0  0 7% ;
+     }
+     
+ }
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
