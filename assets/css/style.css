@@ -1027,6 +1027,7 @@ section {
 @media screen and (max-width:990px){
     .services{
         background-size: 100%;
+        background-position: center;
     }
     .service_icon{
         width:80%;
