@@ -955,11 +955,13 @@ section {
 --------------------------------------------------------------*/
 .services{
     background-image: url("../img/sb2.png");
-    background-position: top;
+    background-position: bottom;
     background-blend-mode: soft-light;
     background-color: rgba(255,255,255,0.7);
     overflow-x: hidden;
     background-attachment: fixed;
+    background-size:70%;
+    background-repeat: no-repeat;
 }
 .services .icon-box {
     margin-bottom: 20px;
@@ -1022,7 +1024,14 @@ section {
     font-size: 14px;
 }
 
-
+@media screen and (max-width:990px){
+    .services{
+        background-size: 100%;
+    }
+    .service_icon{
+        width:80%;
+    }
+}
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
