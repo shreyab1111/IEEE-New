@@ -128,7 +128,7 @@
         var height = $(window).height();
 
         var ratio = width / height;
-        console.log(ratio);
+        //console.log(ratio);
         if (ratio <= 0.56) {
             $(".slide img").attr("src", "assets/img/mob_jumbo.png");
         } else {
