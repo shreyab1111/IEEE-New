@@ -5,7 +5,6 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background-image : url("../img/ag-square.png")
 }
 
 a {
@@ -118,21 +117,21 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Top Bar
+# Top Bar 1
 --------------------------------------------------------------*/
 
 #topbar {
-    background: #0066A1;
+    background: rgb(13, 13, 14);
     color: #fff;
-    height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    height: 25px;
+    font-family: Arial, Helvetica;
+    font-size: 15px;
+    font-weight: 200;
     transition: all 0.5s;
 }
 
 #topbar.topbar-scrolled {
-    top: -40px;
+    top: 0px;
 }
 
 #topbar i {
@@ -141,10 +140,47 @@ h6 {
 
 #topbar a {
     color: rgba(255, 255, 255, 1.0);
-    font-weight: 800;
+    font-weight: 400;
+    font-size: 13px;
 }
 
 #topbar a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Top Bar 2
+--------------------------------------------------------------*/
+
+#topbar2 {
+    background: rgb(5, 80, 124);
+    color: #fff;
+    height: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all 0.5s;
+    z-index: 996;
+}
+
+#topbar2.topbar2-scrolled {
+    top: -5px;
+}
+
+#topbar2 i {
+    padding-right: 6px;
+}
+
+#topbar2 a {
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#topbar2 a:hover {
     color: rgba(255, 255, 255, 0.5);
     font-weight: 600;
     text-decoration: none;
@@ -160,7 +196,7 @@ h6 {
     transition: all 0.5s;
     z-index: 997;
     padding: 20px 0;
-    top: 40px;
+    top: 55px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -171,7 +207,7 @@ h6 {
 }
 
 #header.header-scrolled {
-    top: 0;
+    top: 25px;
 }
 
 #header .logo {
@@ -197,7 +233,19 @@ h6 {
         top: 0;
     }
     #header .logo {
-        font-size: 28px;
+        font-size: 25px;
+    }
+    #header.header-scrolled {
+        top: 0;
+    }
+}
+
+@media (max-width:1205px) {
+    #header form {
+        display: none;
+    }
+    #header i {
+        display: none;
     }
 }
 
@@ -222,7 +270,7 @@ h6 {
 .nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
-    padding: 10px 0 10px 28px;
+    padding: 10px 10px 10px 10px;
 }
 
 .nav-menu a {
@@ -524,7 +572,7 @@ h6 {
 
 #hero .carousel-inner .carousel-item {
     transition-property: opacity;
-    background-position: center top;
+    background-position: center;
 }
 
 #hero .carousel-inner .carousel-item,
@@ -568,16 +616,23 @@ h6 {
     line-height: 1;
     width: auto;
     height: auto;
-    background: rgba(63, 187, 192, 0.4);
+    /* background: rgba(63, 187, 192, 0.4); */
     border-radius: 50px;
     padding: 10px;
     transition: 0.3s;
     color: rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width:400px) {
+    #hero .carousel-control-next-icon,
+    #hero .carousel-control-prev-icon {
+        font-size: "";
+    }
+}
+
 #hero .carousel-control-next-icon:hover,
 #hero .carousel-control-prev-icon:hover {
-    background: rgba(63, 187, 192, 0.6);
+    /* background: rgba(63, 187, 192, 0.6); */
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -627,13 +682,11 @@ h6 {
     }
 }
 
+@media (max-width: 758px) {}
+
 @media (max-width: 768px) {
     #hero h2 {
         font-size: 28px;
-    }
-    #hero img {
-        width: 45hw;
-        height: 90vw;
     }
 }
 
@@ -650,8 +703,14 @@ h6 {
     }
 }
 
-#hero img {
-    padding-top: 30px;
+@media (max-width: 500px) {
+    #hero {
+        height: 60vh;
+    }
+}
+
+#hero .slide {
+    padding-top: 50px;
     align-self: center;
 }
 
@@ -951,6 +1010,17 @@ section {
 # Services
 --------------------------------------------------------------*/
 
+.services {
+    background-image: url("../img/sb3.png");
+    background-position: center;
+    background-blend-mode: soft-light;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .services .icon-box {
     margin-bottom: 20px;
     text-align: center;
@@ -1012,20 +1082,31 @@ section {
     font-size: 14px;
 }
 
+@media screen and (max-width:990px) {
+    .services {
+        background-size: cover;
+        background-position: center;
+    }
+    .service_icon {
+        width: 80%;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
 
-.appointment .php-email-form {
+
+/* .appointment #frm .php-email-form {
     width: 100%;
 }
 
-.appointment .php-email-form .form-group {
+.appointment #frm .php-email-form .form-group {
     padding-bottom: 8px;
 }
 
-.appointment .php-email-form .validate {
+.appointment #frm .php-email-form .validate {
     display: none;
     color: red;
     margin: 0 0 15px 0;
@@ -1033,7 +1114,7 @@ section {
     font-size: 13px;
 }
 
-.appointment .php-email-form .error-message {
+.appointment #frm .php-email-form .error-message {
     display: none;
     color: #fff;
     background: #ed3c0d;
@@ -1042,11 +1123,11 @@ section {
     font-weight: 600;
 }
 
-.appointment .php-email-form .error-message br+br {
+.appointment #frm .php-email-form .error-message br+br {
     margin-top: 25px;
 }
 
-.appointment .php-email-form .sent-message {
+.appointment #frm .php-email-form .sent-message {
     display: none;
     color: #fff;
     background: #18d26e;
@@ -1055,14 +1136,14 @@ section {
     font-weight: 600;
 }
 
-.appointment .php-email-form .loading {
+.appointment #frm #frm .php-email-form .loading {
     display: none;
     background: #fff;
     text-align: center;
     padding: 15px;
 }
 
-.appointment .php-email-form .loading:before {
+.appointment #frm .php-email-form .loading:before {
     content: "";
     display: inline-block;
     border-radius: 50%;
@@ -1075,31 +1156,31 @@ section {
     animation: animate-loading 1s linear infinite;
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form textarea,
-.appointment .php-email-form select {
+.appointment #frm .php-email-form input,
+.appointment #frm .php-email-form textarea,
+.appointment #frm .php-email-form select {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
     padding: 10px !important;
 }
 
-.appointment .php-email-form input:focus,
-.appointment .php-email-form textarea:focus,
-.appointment .php-email-form select:focus {
+.appointment #frm .php-email-form input:focus,
+.appointment #frm .php-email-form textarea:focus,
+.appointment #frm .php-email-form select:focus {
     border-color: #0066A1;
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form select {
+.appointment #frm .php-email-form input,
+.appointment #frm .php-email-form select {
     height: 44px;
 }
 
-.appointment .php-email-form textarea {
+.appointment #frm .php-email-form textarea {
     padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type="submit"] {
+.appointment #frm .php-email-form button[type="submit"] {
     background: #0066A1;
     border: 0;
     padding: 10px 35px;
@@ -1108,9 +1189,9 @@ section {
     border-radius: 50px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
+.appointment #frm .php-email-form button[type="submit"]:hover {
     background: #52c2c6;
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -1202,6 +1283,36 @@ section {
     }
     100% {
         opacity: 1;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Collaborators
+--------------------------------------------------------------*/
+
+.collaborators {
+    background-image: url(../img/binding-light.png);
+}
+
+.collab img {
+    position: relative;
+    width: 200px;
+    height: 100%;
+}
+
+@media screen and (max-width:990px) {
+    .collab img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        padding: 10%;
+        width: 70%;
+    }
+    .collab-title {
+        padding: 0 0 7%;
     }
 }
 
@@ -1918,4 +2029,18 @@ section {
     padding-top: 10px;
     text-align: center;
     font-size: 13px;
+}
+
+#footer.logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#footer .logo img {
+    max-height: 40px;
 }
