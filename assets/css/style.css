@@ -1552,6 +1552,11 @@ section {
     line-height: 24px;
     font-size: 13px;
 }
+.team4 .subtitle1 {
+    font-size: 150%; 
+    color: #0066A1; 
+    padding-bottom: 3%;
+}
 
 .team4 ul li a {
     color: #8d97ad;
